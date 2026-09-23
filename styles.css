@@ -1,0 +1,139 @@
+:root {
+  --bg: #f5f1eb;
+  --card: #fffaf5;
+  --ink: #1d1d1d;
+  --muted: #5b4d45;
+  --accent: #c86e4b;
+  --accent-dark: #9a4d2b;
+  --border: #e8d7c8;
+  --shadow: 0 12px 30px rgba(34, 24, 15, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #f9f4ee 0%, #f0e8e0 100%);
+  color: var(--ink);
+}
+
+.container {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.page-header {
+  background: linear-gradient(135deg, #2f1d1a 0%, #613a2d 100%);
+  color: #fff;
+  padding: 3rem 0 2.5rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14rem;
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.movie-list {
+  padding: 2rem 0 3rem;
+}
+
+.movie-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.movie-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: end;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.movie-title {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+}
+
+.movie-year {
+  color: var(--accent-dark);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.movie-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.meta-item {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+}
+
+.meta-label {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+}
+
+.meta-value {
+  font-weight: 700;
+}
+
+.language-section h2 {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+}
+
+.language-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
+  padding: 0;
+  margin: 0;
+}
+
+.language-list li {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem 0.9rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .movie-card {
+    padding: 1.25rem;
+  }
+
+  .movie-header {
+    align-items: flex-start;
+  }
+}
